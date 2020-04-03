@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^fullpost/([0-9]+)/([0-9a-zA-Z_-]+) fullpost.php?id=$1&name=$2 [NC,L]
